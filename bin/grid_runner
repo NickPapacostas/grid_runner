@@ -50,7 +50,7 @@ desc 'runs a given app listed in the Procfile (or all)'
 arg_name "app names separated by a SPACE or 'all'" 
 command :run do |c|
   c.action do |global_options,options,args|
-    apps_to_run = apps_from_args(args)
+    apps_to_run = apps_from_args(args) || App.all
     if apps_to_run.empty? 
       Rainbow("No app #{args.first} found in Procfile")
     else
