@@ -4,18 +4,9 @@ Grid Runner
 A command line tool for running Grid microservices:
 
 Install
-------- 
+-------
 
 ``` gem install grid_runner ```
-
-*** warning ***
-If you dont get the latest version (0.0.9)
-
-run: 
-``` gem uninstall grid_runner ```
-``` gem install grid_runner -v 0.0.9 ```
-
-not sure what i did to rubygems to bork this. but it was borked for me ^_^
 
 
 Requirements
@@ -36,7 +27,7 @@ Commands
 
 All commands that take an app name can take a space delimited list of app names:
 
-e.g. 
+e.g.
 ``` gr log media-api cropper thrall ```
 
 Logs
@@ -46,12 +37,25 @@ Currently grid_runner will put all logs in ./logs/APPNAME.log
 
 * To watch all logs I use ``` tail -f logs/* ```
 
-Other 
+Other
 -----
 
 I added "alias gr=grid_runner" to my .bash\_profile
 
-e.g. 
+e.g.
 
-* ``` gr run all ``` 
-* ``` gr list ``` 
+* ``` gr run all ```
+* ``` gr list ```
+
+
+Troubleshooting:
+----------------
+
+*** warning ***
+
+run:
+``` gem uninstall grid_runner ```
+``` gem install grid_runner -v 0.1.0 ```
+
+not sure what i did to rubygems to bork this. but it was borked for me ^_^
+
